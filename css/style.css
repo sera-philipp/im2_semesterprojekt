@@ -1,11 +1,34 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
 }
 
 
-body {
-    background-color: pink;
+#wind {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /*character card*/
+    div {
+        background-color: yellow;
+        padding: 10px;
+        text-align: center;
+        img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            overflow: clip;
+            object-fit: cover;
+        }
+        .house {
+            color: blue;
+        }
+    }
 }
 
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
