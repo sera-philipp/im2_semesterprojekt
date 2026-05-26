@@ -1,0 +1,262 @@
+{
+  "spots": [
+    {
+      "id": "braendlen",
+      "name": "Brändlen",
+      "sourceName": "Brändle",
+      "region": "Engelberger-Tal",
+      "regionId": "engelberger-tal",
+      "gondola": {
+        "type": "always_open",
+        "remarks": "Selbstbedienung.",
+        "openingHours": [],
+        "closedPeriods": [],
+        "specialOpenings": []
+      },
+      "webcam": {
+        "available": true,
+        "label": "https://berghof.ch/webcam/",
+        "url": "https://berghof.ch/webcam/"
+      }
+    },
+    {
+      "id": "wolfenschiessen",
+      "name": "Wolfenschiessen",
+      "sourceName": "Wolfenschiessen (Bielen)",
+      "region": "Engelberger-Tal",
+      "regionId": "engelberger-tal",
+      "gondola": {
+        "type": "schedule",
+        "remarks": "Bei starkem Wind bleibt die Bahn geschlossen.",
+        "openingHours": [
+          {
+            "label": "Sommer",
+            "from": "05-01",
+            "to": "09-30",
+            "days": [0, 1, 2, 3, 4, 5, 6],
+            "intervals": [{ "open": "08:00", "close": "17:00" }]
+          },
+          {
+            "label": "Winter",
+            "from": "10-01",
+            "to": "04-30",
+            "days": [0, 1, 2, 3, 4, 5, 6],
+            "intervals": [{ "open": "08:00", "close": "16:00" }]
+          }
+        ],
+        "closedPeriods": [],
+        "specialOpenings": []
+      },
+      "webcam": {
+        "available": true,
+        "label": "https://www.abufdalp.ch/webcam",
+        "url": "https://www.abufdalp.ch/webcam"
+      }
+    },
+    {
+      "id": "wirzweli",
+      "name": "Wirzweli",
+      "sourceName": "Wizweli",
+      "region": "Engelberger-Tal",
+      "regionId": "engelberger-tal",
+      "gondola": {
+        "type": "schedule",
+        "remarks": "Zusätzliche Abendfahrt täglich um 20:00 Uhr. Herbstrevision 2026 vom 02.11.2026 bis 27.11.2026.",
+        "openingHours": [
+          {
+            "label": "Montag bis Freitag",
+            "days": [1, 2, 3, 4, 5],
+            "intervals": [{ "open": "06:45", "close": "18:20" }]
+          },
+          {
+            "label": "Samstag und Sonntag",
+            "days": [0, 6],
+            "intervals": [{ "open": "07:40", "close": "18:20" }]
+          }
+        ],
+        "closedPeriods": [
+          {
+            "from": "2026-11-02",
+            "to": "2026-11-27",
+            "reason": "Herbstrevision 2026"
+          }
+        ],
+        "specialOpenings": []
+      },
+      "webcam": {
+        "available": true,
+        "label": "https://wirzweli.ch/informationen#webcam-und-anlagen",
+        "url": "https://wirzweli.ch/informationen#webcam-und-anlagen"
+      }
+    },
+    {
+      "id": "niederhorn",
+      "name": "Niederhorn",
+      "region": "Interlaken",
+      "regionId": "interlaken",
+      "gondola": {
+        "type": "schedule",
+        "remarks": "Bei schlechter Witterung kann der Betrieb aller Anlagen eingeschränkt oder eingestellt werden.",
+        "openingHours": [
+          {
+            "label": "Montag bis Freitag",
+            "days": [1, 2, 3, 4, 5],
+            "intervals": [{ "open": "06:50", "close": "18:18" }]
+          }
+        ],
+        "closedPeriods": [],
+        "specialOpenings": []
+      },
+      "webcam": {
+        "available": true,
+        "label": "https://www.niederhorn.ch/webcam",
+        "url": "https://www.niederhorn.ch/webcam"
+      }
+    },
+    {
+      "id": "interlaken",
+      "name": "Interlaken",
+      "region": "Interlaken",
+      "regionId": "interlaken",
+      "gondola": {
+        "type": "none",
+        "remarks": "Keine Gondelbahn. Bus vorhanden.",
+        "openingHours": [],
+        "closedPeriods": [],
+        "specialOpenings": []
+      },
+      "webcam": {
+        "available": false,
+        "label": "keine Daten vorhanden",
+        "url": null
+      }
+    },
+    {
+      "id": "weissenstein",
+      "name": "Weissenstein",
+      "region": "Jura-Thal",
+      "regionId": "jura-thal",
+      "gondola": {
+        "type": "schedule",
+        "remarks": "Während den publizierten Revisionen bleibt die Bahn durchgehend geschlossen.",
+        "openingHours": [
+          {
+            "label": "Winter 2025",
+            "from": "2025-11-02",
+            "to": "2026-04-30",
+            "days": [1, 2, 3, 4, 5, 6],
+            "intervals": [{ "open": "08:30", "close": "16:30" }]
+          },
+          {
+            "label": "Winter 2025 Sonn- und Feiertage",
+            "from": "2025-11-02",
+            "to": "2026-04-30",
+            "days": [0],
+            "intervals": [{ "open": "08:30", "close": "16:45" }]
+          },
+          {
+            "label": "Sommer 2026",
+            "from": "2026-05-01",
+            "to": "2026-11-01",
+            "days": [1, 2, 3, 4, 5, 6],
+            "intervals": [{ "open": "08:30", "close": "17:30" }]
+          },
+          {
+            "label": "Sommer 2026 Sonn- und Feiertage",
+            "from": "2026-05-01",
+            "to": "2026-11-01",
+            "days": [0],
+            "intervals": [{ "open": "08:30", "close": "17:45" }]
+          },
+          {
+            "label": "Winter 2026",
+            "from": "2026-11-02",
+            "to": "2027-04-30",
+            "days": [1, 2, 3, 4, 5, 6],
+            "intervals": [{ "open": "08:30", "close": "16:30" }]
+          },
+          {
+            "label": "Winter 2026 Sonn- und Feiertage",
+            "from": "2026-11-02",
+            "to": "2027-04-30",
+            "days": [0],
+            "intervals": [{ "open": "08:30", "close": "16:45" }]
+          }
+        ],
+        "closedPeriods": [
+          {
+            "from": "2026-11-16",
+            "to": "2026-11-27",
+            "reason": "Revision Herbst 2026"
+          },
+          {
+            "from": "2027-03-01",
+            "to": "2027-03-25",
+            "reason": "Revision Frühjahr 2027"
+          }
+        ],
+        "specialOpenings": [
+          {
+            "date": "2026-08-01",
+            "intervals": [
+              { "open": "08:30", "close": "20:00" },
+              { "open": "21:45", "close": "23:30" }
+            ]
+          },
+          {
+            "date": "2026-12-25",
+            "intervals": [{ "open": "08:30", "close": "16:45" }]
+          },
+          {
+            "date": "2026-12-31",
+            "intervals": [
+              { "open": "08:30", "close": "19:30" },
+              { "open": "00:30", "close": "01:30" }
+            ]
+          }
+        ]
+      },
+      "webcam": {
+        "available": true,
+        "label": "https://www.ga-weissenstein.ch/livecams",
+        "url": "https://www.ga-weissenstein.ch/livecams"
+      }
+    },
+    {
+      "id": "schwengimatt",
+      "name": "Schwengimatt",
+      "region": "Jura-Thal",
+      "regionId": "jura-thal",
+      "gondola": {
+        "type": "none",
+        "remarks": "Keine Gondelbahn. Bus vorhanden.",
+        "openingHours": [],
+        "closedPeriods": [],
+        "specialOpenings": []
+      },
+      "webcam": {
+        "available": false,
+        "label": "keine Daten vorhanden",
+        "url": null
+      }
+    },
+    {
+      "id": "obere-wengi",
+      "name": "Obere Wengi",
+      "region": "Jura-Thal",
+      "regionId": "jura-thal",
+      "gondola": {
+        "type": "none",
+        "remarks": "Keine Gondelbahn. Bus vorhanden.",
+        "openingHours": [],
+        "closedPeriods": [],
+        "specialOpenings": []
+      },
+      "webcam": {
+        "available": true,
+        "label": "https://holfuy.com/de/cam/246",
+        "url": "https://holfuy.com/de/cam/246"
+      }
+    }
+  ]
+}

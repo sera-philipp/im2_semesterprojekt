@@ -1,11 +1,301 @@
+@import "resets.css";
+
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --grey: #F1F1F1;
+    --green: #1DFF8E;
+    --green-shade: #C6FFCE;
+    --blue: #1DA1FF;
+    --blue-shade: #C6E7FF;
+    --orange: #FFC31D;
+    --orange-shade: #FFEAB0;
+
+    --f-title: 800 5rem/120% "roboto", Helvetica, Arial, sans-serif;
+    --f-subtitle: 300 2rem/120% "roboto", Helvetica, Arial, sans-serif;
+    --f-body: 300 1.5rem/100% "roboto", Helvetica, Arial, sans-serif;
+    --f-body-weight: 300;
+
+    --ga-large: 2rem;
+    --ga-medium: 1rem;
+    --ga-small: 0.5rem;
+}
+
+body {
+display: flex;
+flex-direction: column;
+background-color: var(--bg-color);
+background-image: url("../assets/img/bg.png");
+background-repeat: repeat;
+background-size: auto;
+background-attachment: fixed;
+font-family: "roboto", Helvetica, Arial, sans-serif;
+font-weight: var(--f-body-weight);
+color: var(--text-color);
+min-height: 100vh;
+}
+
 h1 {
-    text-align: center;
+font: var(--f-title);
+text-align: center;
+margin-top: 1.5rem;
 }
 
 h2 {
+font: var(--f-subtitle);
+text-align: center;
+}
+
+h3 {
+font: var(--f-title);
+font-size: 2rem;
+text-align: center;
+margin-top: 1.5rem;
+}
+
+h4 {
+font: var(--f-title);
+font-size: 1.5rem;
+}
+
+p {
+font: var(--f-body);
+margin-bottom: var(--ga-small);
+}
+
+.topnav {
+display: flex;
+justify-content: space-between;
+background-color: var(--grey);
+position: sticky;
+top: 0;
+z-index: 100; /* z-Index = z-Achse, sprich was ganz vorne steht */
+padding: var(--ga-small);
+padding-left: var(--ga-large);
+}
+
+.logo {
+font: "roboto", Helvetica, Arial, sans-serif;
+font-style: italic;
+font-size: 1.5rem;
+color: var(--text-color);
+text-decoration: none;
+}
+
+.hero-content {
+display: flex;
+justify-content: center;
+gap: var(--ga-large);
+padding: var(--ga-large);
+}
+
+
+
+
+/* Karte & Buttons */
+.map-wrapper {
+    position: relative;
+    width: min(100%, 700px);
+    margin: 0 auto;
+}
+
+.map-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.map-marker {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.map-marker lottie-player {
+    width: 100%;
+    height: 100%;
+}
+
+.marker-engelberg {
+    left: 53%;
+    top: 45%;
+}
+
+.marker-interlaken {
+    left: 42%;
+    top: 54%;
+}
+
+.marker-jura {
+    left: 35%;
+    top: 35%;
+}
+
+
+
+/* Gebiete */
+.spot-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem 3rem;
+
+}
+
+.spot-link {
+    display: flex; 
+    align-items: flex-end;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.spot-number {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--green-shade);
+}
+
+.spot-name {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-left: -0.5rem;
+    color: var(--text-color);
+}
+
+.spot-detail {
+    margin-top: 3rem;
+    padding: 2rem 2rem;
     text-align: center;
 }
 
+.spot-detail.green {
+    background-color: var(--green-shade);
+}
+
+.spot-detail.blue {
+    background-color: var(--blue-shade);
+}
+
+.spot-detail.orange {
+    background-color: var(--orange-shade);
+}
+
+.spot-detail h1 {
+    color: var(--text-color);
+    margin-top: 0;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+
+    img {
+        width: 30%;
+        height: auto;
+    }
+}
+
+.wind-arrow {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 1.15em;
+    font-weight: 800;
+    line-height: 1;
+    transform: rotate(var(--wind-direction));
+    transform-origin: center;
+}
+
+.gondola-remarks {
+    font-weight: 300;
+}
+
+#detail-webcam a {
+    color: var(--text-color);
+}
+
+
+
+/* Fluggebiete */
+
+#engelberger-tal img,
+#interlaken img,
+#jura-thal img {
+    display: block;
+    width: min(100%, 700px);
+    height: auto;
+    margin: 0 auto;
+}
+
+#engelberger-tal h1 {
+    color: var(--green);
+}  
+#engelberger-tal .spot-number {
+    color: var(--green-shade);
+}
+
+#interlaken h1 {
+    color: var(--blue);
+}
+#interlaken .spot-number {
+    color: var(--blue-shade);
+}
+
+#jura-thal h1 {
+    color: var(--orange);
+}
+#jura-thal .spot-number {
+    color: var(--orange-shade);
+}
+
+.brändlen {
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+
+.wolfenschiessen {
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+
+.wirzweli {
+    grid-column: 4 / 6;
+    grid-row: 1;
+}
+
+.niederhorn {
+    grid-column: 3 / 3;
+    grid-row: 1;
+}
+
+.interlaken {
+    grid-column: 4 / 6;
+    grid-row: 1;
+}
+
+.weissenstein {
+    grid-column: 3 / 3;
+    grid-row: 1;
+}
+
+.schwengimatt {
+    grid-column: 3 / 3;
+    grid-row: 2;
+}
+
+.obere-wengi {
+    grid-column: 4 / 6;
+    grid-row: 1;
+}
+
+
+
+
+/* API 1 */
 
 #wind {
     display: grid;
@@ -22,11 +312,9 @@ h2 {
             overflow: clip;
             object-fit: cover;
         }
-        .house {
-            color: blue;
-        }
     }
 }
+
 
 footer {
     text-align: center;

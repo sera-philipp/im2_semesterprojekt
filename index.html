@@ -3,20 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocktail API</title>
+    <title>ufä</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/npb5hjb.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
+
 <body>
+
+    <nav class="topnav">
+        <a class="logo" href="index.html">ufä</a>
+    </nav>
+
     <header>
         <h1>Wo wosch hüt ufä?</h1>
         <h2>Wähle dein Fluggebiet!</h2>
 
+        <div class="hero-content"> 
+            <div class="map-wrapper">
+            <img class="map-image" src="assets/img/map.png" alt="Schweizerkarte" />
+
+
+            <a class="map-marker marker-engelberg" href="#engelberger-tal" data-target="engelberger-tal" aria-label="Engelberger-Tal">
+                <lottie-player
+                    src="assets/lotties/button-grn.json"
+                    background="transparent"
+                    speed="1"
+                    loop
+                    autoplay>
+                </lottie-player>
+            </a>
+
+            <a class="map-marker marker-interlaken" href="#interlaken" data-target="interlaken" aria-label="Interlaken">
+                <lottie-player
+                    src="assets/lotties/button-blau.json"
+                    background="transparent"
+                    speed="1"
+                    loop
+                    autoplay>
+                </lottie-player>
+            </a>
+
+            <a class="map-marker marker-jura" href="#jura-thal" data-target="jura-thal" aria-label="Jura-Thal">
+                <lottie-player
+                    src="assets/lotties/button-orange.json"
+                    background="transparent"
+                    speed="1"
+                    loop
+                    autoplay>
+                </lottie-player>
+            </a>
+        </div>
+        </div>
     </header>
 
 
     <main>
-        <section id="wind"></section>
+        <section id="engelberger-tal" class="flight-section" hidden>
+            <h1>ENGELBERGER-TAL</h1>
+
+            <div class="engelberg">
+            <img src="assets/img/engelberg.png" alt="Engelberger-Tal" />
+            </div>
+
+            <div class="spot-list">
+                <a class="spot-link brändlen"
+                href="#spot-detail"
+                data-spot="Brändlen"
+                data-region="Engelberger-Tal"
+                data-color="green"
+                data-api-index="0">
+                    <span class="spot-number brändlen">01</span>
+                    <span class="spot-name">Brändlen</span>
+                </a>
+
+                <a class="spot-link wolfenschiessen"
+                href="#spot-detail"
+                data-spot="Wolfenschiessen"
+                data-region="Engelberger-Tal"
+                data-color="green"
+                data-api-index="1">
+                    <span class="spot-number wolfenschiessen">02</span>
+                    <span class="spot-name">Wolfenschiessen</span>
+                </a>
+
+                <a class="spot-link wirzweli"
+                href="#spot-detail"
+                data-spot="Wirzweli"
+                data-region="Engelberger-Tal"
+                data-color="green"
+                data-api-index="2">
+                    <span class="spot-number wirzweli">03</span>
+                    <span class="spot-name">Wirzweli</span>
+                </a>
+        </div>
+        </section>
+
+
+
+        <section id="interlaken" class="flight-section" hidden>
+            <h1>INTERLAKEN</h1>
+
+            <div class="interlaken">
+            <img src="assets/img/interlaken.png" alt="Interlaken" />
+            </div>
+
+            <div class="spot-list">
+                <a class="spot-link niederhorn"
+                href="#spot-detail"
+                data-spot="Niederhorn"
+                data-region="Interlaken"
+                data-color="blue"
+                data-api-index="3">
+                    <span class="spot-number niederhorn">01</span>
+                    <span class="spot-name">Niederhorn</span>
+                </a>
+
+                <a class="spot-link interlaken"
+                href="#spot-detail"
+                data-spot="Interlaken"
+                data-region="Interlaken"
+                data-color="blue"
+                data-api-index="4">
+                    <span class="spot-number interlaken">02</span>
+                    <span class="spot-name">Interlaken</span>
+                </a>
+        </div>
+        </section>
+
+
+
+        <section id="jura-thal" class="flight-section" hidden>
+            <h1>JURA-THAL</h1>
+
+            <div class="jura-thal">
+            <img src="assets/img/jura.png" alt="Jura-Thal" />
+            </div>
+
+            <div class="spot-list">
+                <a class="spot-link weissenstein"
+                href="#spot-detail"
+                data-spot="Weissenstein"
+                data-region="Jura-Thal"
+                data-color="orange"
+                data-api-index="5">
+                    <span class="spot-number">01</span>
+                    <span class="spot-name">Weissenstein</span>
+                </a>
+
+                <a class="spot-link schwengimatt"
+                href="#spot-detail"
+                data-spot="Schwengimatt"
+                data-region="Jura-Thal"
+                data-color="orange"
+                data-api-index="7">
+                    <span class="spot-number">02</span>
+                    <span class="spot-name">Schwengimatt</span>
+                </a>
+
+                <a class="spot-link obere-wengi"
+                href="#spot-detail"
+                data-spot="Obere Wengi"
+                data-region="Jura-Thal"
+                data-color="orange"
+                data-api-index="8">
+                    <span class="spot-number">03</span>
+                    <span class="spot-name">Obere Wengi</span>
+                </a>
+
+        </div>
+        </section>
+
+        <section id="spot-detail" class="spot-detail" hidden>
+            <h3 id="detail-title">Weissenstein</h3>
+            <p id="detail-region">(Jura-Thal)</p>
+
+            <div class="detail-grid">
+                <div>
+                    <img id="wind-icon" src="assets/icons/wind.png" alt="Wind-Icon" />
+                    <h4 id="detail-wind"></h4>
+                </div>
+
+                <div>
+                    <img id="gondel-icon" src="assets/icons/gondel.png" alt="Gondel-Icon" />
+                    <h4 id="detail-lift">--</h4>
+                </div>
+
+                <div>
+                    <img id="webcam-icon" src="assets/icons/webcam.png" alt="Webcam-Icon" />
+                    <h4 id="detail-webcam">--</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="wind">
+        </section>
     </main>
 
 
