@@ -1,3 +1,5 @@
+const url = "https://im2.uhavizam.myhostpoint.ch/";
+
 // Auswahl auf Karte
 const mapMarkers = document.querySelectorAll(".map-marker");
 const flightSections = document.querySelectorAll(".flight-section");
@@ -165,7 +167,9 @@ function isGondolaOpen(gondola) {
     return false;
   }
 
-  const specialOpening = gondola.specialOpenings?.find((item) => item.date === getDateValue(now));
+  const specialOpening = gondola.specialOpenings?.find(
+    (item) => item.date === getDateValue(now),
+  );
 
   if (specialOpening) {
     return isInTimeInterval(specialOpening.intervals, now);
