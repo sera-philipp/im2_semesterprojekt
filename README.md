@@ -1,0 +1,20 @@
+Projekt-Doku: ufä
+
+Projektidee: Ich habe eine interaktive Website namens ufä entwickelt. Die Website hilft Nutzer:innen dabei, passende Fluggebiete auszuwählen und wichtige Informationen zu den jeweiligen Orten schnell zu erfassen. Im Zentrum steht eine Schweizerkarte, auf der verschiedene Regionen mit animierten Lottie-Buttons markiert sind. Über diese Buttons können die einzelnen Fluggebiete geöffnet werden.
+
+Umsetzung: Die Website wurde mit HTML, CSS und JavaScript umgesetzt. Im HTML habe ich die Grundstruktur der Seite aufgebaut: Navigation, Hero-Bereich mit Karte, einzelne Fluggebiet-Sections und einen Detailbereich für zusätzliche Informationen.
+Im CSS habe ich das visuelle Erscheinungsbild gestaltet. Dazu gehören das wiederholende Grid-Hintergrundbild, die farbliche Unterscheidung der Regionen sowie das Layout der Spot-Links. Die einzelnen Regionen haben eigene Farben: Engelberger-Tal ist grün, Interlaken blau und Jura-Thal orange. Die Lottie-Buttons wurden absolut auf der Karte positioniert, damit sie auch bei skalierender Karte an der richtigen Stelle bleiben.
+
+JavaScript und Codex: Mit JavaScript habe ich die Interaktionen der Website umgesetzt. Beim Klick auf einen Lottie-Button wird nur das passende Fluggebiet eingeblendet. Klickt man danach auf eine Ortschaft, erscheint ein Detailbereich mit Windwerten, Informationen zur Gondelbahn und einem Webcam-Link.
+Dabei habe ich Codex als Unterstützung genutzt, um die JavaScript-Logik Schritt für Schritt aufzubauen und zu prüfen. Codex half mir dabei, die Klickfunktionen zu strukturieren, Daten aus der Open-Meteo API einzubinden, die passende Ortschaft über data-* Attribute zuzuordnen und zusätzliche Informationen aus einer lokalen JSON-Datei auszulesen. Auch die Berechnung, ob eine Gondelbahn anhand von Uhrzeit, Saison und Revision aktuell geöffnet oder geschlossen ist, wurde mit Unterstützung von Codex entwickelt.
+Zusätzlich wurde Codex genutzt, um Fehler im JavaScript besser einzugrenzen, zum Beispiel wenn API-Daten nicht geladen wurden oder ein Script durch einen fehlerhaften Rückgabewert abgebrochen ist.
+
+Daten und APIs: Für die aktuellen Windwerte verwende ich die Open-Meteo API. Die Daten werden geladen und anhand eines Indexes der jeweiligen Ortschaft zugeordnet. Zusätzlich wird ein Pfeil angezeigt, der sich entsprechend der Windrichtung dreht.
+Da es für Gondelbahn-Status und Webcam-Informationen keine passende offene API gab, habe ich eine eigene lokale JSON-Datei erstellt. Diese enthält pro Ortschaft Informationen zu Öffnungszeiten, Revisionen, Bemerkungen und Webcam-Links. Das JavaScript berechnet daraus, ob eine Gondelbahn aktuell als geöffnet oder geschlossen angezeigt wird.
+
+Herausforderungen: Eine Herausforderung war die korrekte Positionierung der Lottie-Buttons auf der Karte. Dafür musste die Karte in einen relativen Wrapper gelegt werden, während die Buttons absolut mit Prozentwerten positioniert wurden.
+Eine weitere Herausforderung war die Arbeit mit der API. Zeitweise gab es CORS- und Serverfehler, wodurch die Winddaten nicht geladen wurden. Deshalb musste der Code robuster werden, damit die Seite nicht komplett fehlschlägt, wenn Daten nicht verfügbar sind.
+Auch die Gondelbahn-Daten waren anspruchsvoll, weil sie nicht einfach statisch geöffnet oder geschlossen sein können. Die Öffnungszeiten mussten so strukturiert werden, dass die Website abhängig von Uhrzeit, Datum, Saison und Revisionen den passenden Status berechnen kann.
+Ein kleiner, aber typischer Stolperstein war ausserdem der Browser-Cache: CSS-Änderungen wurden nicht immer sofort sichtbar und mussten mit einem Hard Refresh neu geladen werden.
+
+Fazit: Das Projekt verbindet Gestaltung, Interaktion und Datenlogik. Besonders wichtig war, dass die Website nicht nur schön aussieht, sondern auch funktional auf Nutzereingaben reagiert. Durch die Kombination aus Karte, animierten Buttons, API-Daten und eigener JSON-Datenstruktur ist eine interaktive Informationsseite entstanden, die gezielt für die Nutzung rund um Fluggebiete aufgebaut ist.
